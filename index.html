@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Formulario Registro</title>
+</head>
+
+<body>
+  <form action="register" id="survey-form">
+    <section class="form-register">
+      <h1 id="title">Formulario de Encuesta</h1>
+      <div>
+        <label for="name" id="name-label">Nombres</label>
+        <input class="controls" type="text" name="nombres" id="name" placeholder="Ingrese su Nombre" required>
+      </div>
+
+      <div>
+        <label for="apellidos" id="lasName">Apellidos</label>
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
+      </div>
+
+      <div class="opcion-Genero">
+        <p>Hombre</p>
+        <p><input value="Hombre" type="radio" name="elegir-sexo" checked="" required></p>
+
+        <p>Mujer</p>
+        <p><input value="Mujer" type="radio" name="elegir-sexo" checked="" required></p>
+      </div>
+
+      <div>
+        <label for="correo" id="email-label">Correo</label>
+        <input class="controls" type="email" name="correo" id="email" placeholder="Ingrese su Correo" required>
+      </div>
+
+      <div>
+        <label for="edad" id="number-label">Edad</label>
+        <input class="form-controls" type="number" value="edad" id="number" min="18" max="50"
+          placeholder="Ingrese su Edad" required>
+      </div>
+
+
+
+      <div id="seleccion">
+        <h3>Que ambitos laborales te interesan</h3>
+        <select id="dropdown" name="Opciones" class="form-control" required>
+
+
+          <option disabled selected>Selecciona tu opción</option>
+
+          <option value="Programacion" name="boton1">Programacion</option>
+
+
+          <option value="Marketing Digital" name="boton4">Marketing Digital</option>
+
+        </select>
+      </div>
+
+      <div class="form-group">
+        <h3>Ingresa lo que deseas estudiar</h3>
+
+
+        <p>Informatica</p>
+        <p><input class="opcion-checkbox" value="Informatica" type="checkbox" name="op-carreras">
+
+        <p>Diseño</p>
+        <input class="opcion-checkbox" value="Diseño" type="checkbox" name="op-carreras">
+
+      </div>
+
+      <div>
+
+        <label for="contraseña" id="password">contraseña</label>
+        <input class="controls" type="password" name="clave" id="contraseña" placeholder="Ingrese su Contraseña">
+      </div>
+      <div>
+        <p>Comentarios</p>
+        <textarea name="comentarios" id="coment" cols="45" rows="5"></textarea>
+      </div>
+      
+      <a href="#">Terminos y Condiciones</a></p>
+
+      <input class="button" type="submit" id="submit" value="Enviar">
+      <p id="description"><a href="#">Ya complete la encuesta anteriormente</a></p>
+    </section>
+  </form>
+</body>
+
+</html>
