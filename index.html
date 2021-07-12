@@ -10,25 +10,35 @@
 </head>
 
 <body>
+  <header class="geek"><img src="descarga.png" alt="imagen Academia Geek"></header>
+
+    <div class="subTitulo"><h1>Bienvenidos</h1></div>  
+
+    <div class="mensaje">
+      <h1>¡Gracias por dedicarnos tu tiempo!</h1>
+    </div>
+  
   <form action="register" id="survey-form">
     <section class="form-register">
       <h1 id="title">Formulario de Encuesta</h1>
       <div>
         <label for="name" id="name-label">Nombres</label>
-        <input class="controls" type="text" name="nombres" id="name" placeholder="Ingrese su Nombre" required>
+        <input class="controls" type="text" name="nombres" id="name" placeholder="Ingrese su Nombre" required pattern="[Aa-Zz]" autofocus>
       </div>
 
       <div>
         <label for="apellidos" id="lasName">Apellidos</label>
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required pattern="[Aa-Zz]">
       </div>
-
+      <label for="sex" class="genero">Genero</label>
       <div class="opcion-Genero">
+        
         <p>Hombre</p>
         <p><input value="Hombre" type="radio" name="elegir-sexo" checked="" required></p>
 
         <p>Mujer</p>
         <p><input value="Mujer" type="radio" name="elegir-sexo" checked="" required></p>
+        
       </div>
 
       <div>
@@ -36,54 +46,49 @@
         <input class="controls" type="email" name="correo" id="email" placeholder="Ingrese su Correo" required>
       </div>
 
-      <div>
+      <div class="age">
         <label for="edad" id="number-label">Edad</label>
         <input class="form-controls" type="number" value="edad" id="number" min="18" max="50"
           placeholder="Ingrese su Edad" required>
       </div>
-
-
-
-      <div id="seleccion">
-        <h3>Que ambitos laborales te interesan</h3>
-        <select id="dropdown" name="Opciones" class="form-control" required>
-
-
-          <option disabled selected>Selecciona tu opción</option>
-
-          <option value="Programacion" name="boton1">Programacion</option>
-
-
-          <option value="Marketing Digital" name="boton4">Marketing Digital</option>
-
-        </select>
+      
+      <div>
+        <label for="lugar" id="residencia">Lugar de residencia</label>
+        <input class="controls" type="text" id="lugarResidencia" placeholder="Lugar de residencia" required pattern="[Aa-Zz]">
       </div>
 
       <div class="form-group">
         <h3>Ingresa lo que deseas estudiar</h3>
 
-
-        <p>Informatica</p>
+        <p>Informática</p>
         <p><input class="opcion-checkbox" value="Informatica" type="checkbox" name="op-carreras">
 
-        <p>Diseño</p>
+        <p>Diseño Gráfico</p>
         <input class="opcion-checkbox" value="Diseño" type="checkbox" name="op-carreras">
-
       </div>
 
-      <div>
+      <div id="seleccion">
+        <h3>Que ambitos laborales te interesan</h3>
+        <select id="dropdown" name="Opciones" class="form-control" required>
 
-        <label for="contraseña" id="password">contraseña</label>
-        <input class="controls" type="password" name="clave" id="contraseña" placeholder="Ingrese su Contraseña">
+          <option disabled selected>Selecciona tu opción</option>
+          <option value="Back-End" name="boton1">Desarrollador Back-End</option>
+          <option value="Front-End" name="boton1">Desarrollador Front-End</option>
+          <option value="diseño" name="boton1">Diseño Publicitario</option>
+          <option value="Marketing Digital" name="boton4">Marketing Digital</option>
+
+        </select>
       </div>
+
       <div>
         <p>Comentarios</p>
         <textarea name="comentarios" id="coment" cols="45" rows="5"></textarea>
       </div>
-      
-      <a href="#">Terminos y Condiciones</a></p>
 
-      <input class="button" type="submit" id="submit" value="Enviar">
+  <!--onclick= "location.href='index.html'"-->
+
+      <input type="submit" id="submit" value="Enviar">
+
       <p id="description"><a href="#">Ya complete la encuesta anteriormente</a></p>
     </section>
   </form>
